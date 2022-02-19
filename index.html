@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle-Français</title>
+    <!-- Option 1: Include in HTML -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> 
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header class="header flex-center-row">
+       <span class="span-buton" id="btn-aide" ><i class="bi bi-question-circle"></i></span><h1>Wordle-Français</h1>
+   </header>
+
+   <div class="aide flex-center-column" id="aide">
+       <pre>
+           Vous avez 6 essais pour deviner le <b>MOT</b>
+
+           Suggérez le mot de 5 lettres et appuyez sur le 
+           bouton de validation. <span class="LettreDuClavier-2 " style="margin: 20px; display:inline-block ;"  >Entrer</span>
+
+           Le mot se colore alors pour vous donner un indice supplémentaire.
+       </pre>
+       <div class="span-mot"><span class="span-letter" style="background-color: green; color: #fff;">H</span>
+       <span class="span-letter">E</span>
+       <span class="span-letter">U</span>
+       <span class="span-letter">R</span>
+       <span class="span-letter">E</span></div>
+       
+       <pre>
+           <span style="color: green;" class="span-text">Une lettre colorée en vert </span> indique  qu'elle existe dans le mot à deviner et se trouve à la bonne place
+       </pre>
+       <div class="span-mot">
+        <span class="span-letter" >J</span>
+       <span class="span-letter" style="background-color: yellow; color: #000;" >A</span>
+       <span class="span-letter">M</span>
+       <span class="span-letter">B</span>
+       <span class="span-letter">E</span></div>
+       
+       <pre>
+           <span style="color: yellow;" class="span-text">Une lettre colorée en jaune </span> indique  qu'elle existe dans le mot à deviner , mais a un autre endroit
+       </pre>
+       <div class="span-mot"><span class="span-letter">L</span>
+       <span class="span-letter">I</span>
+       <span class="span-letter">G</span>
+       <span class="span-letter" style="background-color: red; color: #fff;" >N</span>
+       <span class="span-letter">E</span></div>
+       
+       <pre>
+           <span style="color: red;" class="span-text">Une lettre colorée en rouge  </span> indique  qu'elle n'existe pas dans le mot à deviner .
+       </pre>
+
+   </div>
+
+
+   <div class="jeu flex-spaceArouns-row">
+       <div><div class="span-mot" id="span-mot-0">
+        <div class="span-letter span-letter-0"></div>
+        <div class="span-letter span-letter-0"></div>
+        <div class="span-letter span-letter-0"></div>
+        <div class="span-letter span-letter-0"></div>
+        <div class="span-letter span-letter-0"></div>
+        
+    </div>
+
+    <div class="span-mot" id="span-mot-1">
+        <div class="span-letter span-letter-1"></div>
+        <div class="span-letter span-letter-1"></div>
+        <div class="span-letter span-letter-1"></div>
+        <div class="span-letter span-letter-1"></div>
+        <div class="span-letter span-letter-1"></div>
+    </div>
+
+    <div class="span-mot" id="span-mot-2">
+        <div class="span-letter span-letter-2"></div>
+        <div class="span-letter span-letter-2"></div>
+        <div class="span-letter span-letter-2"></div>
+        <div class="span-letter span-letter-2"></div>
+        <div class="span-letter span-letter-2"></div>
+    </div>
+
+    <div class="span-mot" id="span-mot-3">
+        <div class="span-letter span-letter-3"></div>
+        <div class="span-letter span-letter-3"></div>
+        <div class="span-letter span-letter-3"></div>
+        <div class="span-letter span-letter-3"></div>
+        <div class="span-letter span-letter-3"></div>
+    </div>
+
+    <div class="span-mot" id="span-mot-4">
+        <div class="span-letter span-letter-4"></div>
+        <div class="span-letter span-letter-4"></div>
+        <div class="span-letter span-letter-4"></div>
+        <div class="span-letter span-letter-4"></div>
+        <div class="span-letter span-letter-4"></div>
+    </div>
+
+    <div class="span-mot" id="span-mot-5">
+        <div class="span-letter span-letter-5"></div>
+        <div class="span-letter span-letter-5"></div>
+        <div class="span-letter span-letter-5"></div>
+        <div class="span-letter span-letter-5"></div>
+        <div class="span-letter span-letter-5"></div>
+    </div></div>
+    
+    <div id="div-droite">
+        <div id="clavier">
+            <div class="LettreDuClavier" id="a" >A</div>
+            <div class="LettreDuClavier" id="b" >B</div>
+            <div class="LettreDuClavier" id="c" >C</div>
+            <div class="LettreDuClavier" id="d" >D</div>
+            <div class="LettreDuClavier" id="e" >E</div>
+            <div class="LettreDuClavier" id="f" >F</div>
+            <div class="LettreDuClavier" id="g" >G</div>
+            <div class="LettreDuClavier" id="h" >H</div>
+            <div class="LettreDuClavier" id="i" >I</div>
+            <div class="LettreDuClavier" id="j" >J</div>
+            <div class="LettreDuClavier" id="k" >K</div>
+            <div class="LettreDuClavier" id="l" >L</div>
+            <div class="LettreDuClavier" id="m" >M</div>
+            <div class="LettreDuClavier" id="n" >N</div>
+            <div class="LettreDuClavier" id="o" >O</div>
+            <div class="LettreDuClavier" id="p" >P</div>
+            <div class="LettreDuClavier" id="q" >Q</div>
+            <div class="LettreDuClavier" id="r" >R</div>
+            <div class="LettreDuClavier" id="s" >S</div>
+            <div class="LettreDuClavier" id="t" >T</div>
+            <div class="LettreDuClavier" id="u" >U</div>
+            <div class="LettreDuClavier" id="v" >V</div>
+            <div class="LettreDuClavier" id="w" >W</div>
+            <div class="LettreDuClavier" id="x" >X</div>
+            <div class="LettreDuClavier" id="y" >Y</div>
+            <div class="LettreDuClavier" id="z" >Z</div>
+            <div class="LettreDuClavier-2" id="entrer" >Entrer</div>
+            <div class="LettreDuClavier-2" id="effacer" ><i class="bi bi-backspace"></i></div>
+          </div>
+          <div id="message"></div>
+    </div>
+
+   </div>
+   
+
+
+   <script type="module" src="js/script.js"></script>
+  
+   
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

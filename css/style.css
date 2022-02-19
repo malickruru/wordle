@@ -1,0 +1,182 @@
+body {
+  background-color: #202124;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+.span-letter {
+  /* padding: 20px 20px; */
+  border: 1px solid #fff;
+  font-size: 2em;
+  font-family: sans-serif;
+  height: 60px;
+  width: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*autre classe des span*/
+.span-buton {
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  height: auto;
+}
+.span-text {
+  border: none;
+  padding: 2px 2px;
+}
+
+.span-mot {
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+}
+/*les flex*/
+
+.flex-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-spaceArouns-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #3a3b3d;
+}
+
+.aide {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 90vh;
+  padding: 60px;
+  transition: 0.3s;
+  background-color: #202124;
+}
+
+.aide-close {
+  max-height: 0;
+  padding: 0;
+}
+
+.jeu {
+  position: absolute;
+  top: 0;
+  padding: 30px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+/* clavier */
+#clavier {
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.LettreDuClavier {
+  padding: 10px;
+  margin: 5px;
+  background-color: darkgray;
+  cursor: pointer;
+}
+
+.LettreDuClavier-2 {
+  background-color: #fff;
+  border: #000;
+  color: #000;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* style des messages */
+
+#message {
+  position: absolute;
+}
+
+.ereur {
+  animation: vibrate 0.5s;
+  transition: opacity 0.3s ease-out;
+  font-size: 1.3em;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.vert {
+  background-color: green;
+}
+
+.jaune {
+  background-color: yellow;
+  color: #000;
+}
+
+.rouge {
+  background-color: red;
+}
+
+.btn {
+  background-color: #000;
+  border: solid 1px #fff;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(51, 51, 51);
+}
